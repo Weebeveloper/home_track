@@ -1,0 +1,21 @@
+<div class="content__container">
+  <div class="message">?למחוק את הרשומה שנבחרה</div>
+  <div class="buttons__container">
+    <button
+      mat-raised-button
+      class="button"
+      (click)="closeDialog('X')"
+      tabindex="-1"
+    >
+      כן
+    </button>
+    <button
+      mat-raised-button
+      class="button"
+      (click)="closeDialog('')"
+      tabindex="-1"
+    >
+      לא
+    </button>
+  </div>
+</div>

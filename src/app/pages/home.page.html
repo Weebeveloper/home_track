@@ -1,0 +1,43 @@
+<div class="content__container" #contentContainer>
+  <!-- List Table -->
+  <div
+    class="content__list"
+    *ngFor="let table of tables; let tableInex = index"
+    [style.animation-delay]="tableInex*100+'ms'"
+  >
+    <div [ngClass]="'header header__index__' + tableInex">
+      {{ table }}
+      <button mat-icon-button class="header__button">
+        <mat-icon class="header__button__icon">add_circle</mat-icon>
+      </button>
+    </div>
+    <div
+      cdkDropList
+      class="content__list__data"
+      (wheel)="onListScroll($event)"
+      (cdkDropListDropped)="onItemChangeLocation($event, tableInex)"
+    >
+      <div
+        cdkDrag
+        [cdkDragStartDelay]="200"
+        *ngFor="let item of tableData[tableInex]; let itemInex = index"
+        class="content__list__data__item"
+      >
+        <div
+          *cdkDragPlaceholder
+          class="content__list__data__item__custom__placeholder"
+        ></div>
+        {{ item }}
+        <button
+          mat-icon-button
+          (click)="deleteDialog(itemInex, tableInex)"
+          class="content__list__data__item__button"
+        >
+          <mat-icon class="content__list__data__item__button__icon"
+            >delete</mat-icon
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
