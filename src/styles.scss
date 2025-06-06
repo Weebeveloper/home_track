@@ -40,9 +40,14 @@ $home_track-theme: mat.define-light-theme(
 html,
 body {
   height: 100%;
+  direction: rtl;
+  overflow: hidden;
 }
 body {
   margin: 0;
+  background: url("assets/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 *:not(mat-icon) {

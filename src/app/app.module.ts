@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { HomePageModule } from './pages/home.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),
+
+    HomePageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

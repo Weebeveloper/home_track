@@ -1,0 +1,27 @@
+.content__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  .message {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: yellow;
+  }
+
+  .buttons__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50%;
+    align-items: center;
+
+    .button {
+      transform: scale(1.5);
+      font-size: 1.2rem;
+    }
+  }
+}
